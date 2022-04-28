@@ -26,7 +26,17 @@ class Main():
     def options(self):
     	print(self.r + " \n [1] Local machine \n")
     	print(self.c + " [2] URL look up\n")
-    	print(self.rr + " [3] Domain look up\n")     
+    	print(self.rr + ''' [3] Domain look up
+            
+            
+███╗   ██╗███████╗████████╗
+████╗  ██║██╔════╝╚══██╔══╝
+██╔██╗ ██║█████╗     ██║   
+██║╚██╗██║██╔══╝     ██║   
+██║ ╚████║███████╗   ██║   
+╚═╝  ╚═══╝╚══════╝   ╚═╝   
+                           
+\n''')     
 
 
 # Defining local info as a call 
