@@ -22,11 +22,15 @@ class Main():
             choose = input(str('Enter option: '))
             if(choose == str("1")):
             	Local_info()
+            elif(choose == str("2")):
+              DOM_lookup()
+            elif(choose == str("3")):
+              URL_lookup()
 
     def options(self):
     	print(self.r + " \n [1] Local machine \n")
-    	print(self.c + " [2] URL look up\n")
-    	print(self.rr + ''' [3] Domain look up
+    	print(self.c + " [2] IP Domain lookup \n")
+    	print(self.rr + ''' [3] URL IP lookup
             
             
 ███╗   ██╗███████╗████████╗
@@ -38,7 +42,18 @@ class Main():
                            
 \n''')     
 
+def URL_lookup():
+  host_name1 = input("Enter URL: ")
+  print(f'The {host_name1} IP: {socket.gethostbyname(host_name1)}')
 
+def DOM_lookup():
+  try:
+    ipdom = input("Enter domain: ")
+    IP = socket.gethostbyname(ipdom)
+    print("IP: " + IP)
+  except:
+    print("Invalid Domain")
+    
 # Defining local info as a call 
 def Local_info():
 # Defines and calls python // network to give both IP and local machine name 
